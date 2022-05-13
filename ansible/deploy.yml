@@ -1,0 +1,19 @@
+---
+- hosts: 'socrata_gateway'
+  become: 'yes'
+  roles:
+    - 'City-of-Bloomington.linux'
+
+  tasks:
+    - name: 'Install Java'
+      apt:
+        name: 'default-jdk'
+        state: 'present'
+
+    - name: 'Create Socrata user'
+      user:
+        system: 'yes'
+        name: 'socrata'
+        home: '/srv/socrata'
+        create_home: 'yes'
+...
