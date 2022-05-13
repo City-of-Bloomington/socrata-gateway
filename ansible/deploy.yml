@@ -15,5 +15,6 @@
         system: 'yes'
         name: 'socrata'
         home: '/srv/socrata'
+        shell: '/bin/bash'
         create_home: 'yes'
 ...
